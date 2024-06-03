@@ -32,8 +32,8 @@ jobs:
           aws-region: your-region
 
       - name: Get kubeconfig
-        run: aws eks update-kubeconfig --name go-eks-cluster --region us-west-2
+        run: aws eks update-kubeconfig --name my-eks-cluster --region us-west-2
 
       - name: Deploy to EKS using Helm
         run: |
-          helm upgrade --install my-app ./helm/my-app --set image.repository=${{ secrets.DOCKER_USERNAME }}/my-app --set image.tag=latest --namespace default --create-namespace
+          helm upgrade --install go-app ./helm/go-app --set image.repository=${{ secrets.DOCKER_USERNAME }}/go-app --set image.tag=latest --namespace default --create-namespace
