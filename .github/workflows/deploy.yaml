@@ -32,7 +32,7 @@ jobs:
           aws-region: your-region
 
       - name: Get kubeconfig
-        run: aws eks update-kubeconfig --name your-eks-cluster --region your-region
+        run: aws eks update-kubeconfig --name go-eks-cluster --region us-west-2
 
       - name: Deploy to EKS using Helm
         run: |
