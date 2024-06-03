@@ -2,7 +2,7 @@ name: Deploy to EKS
 
 on:
   workflow_run:
-    workflows: ["Build and Push"]
+    workflows: ["Docker Go App CI/CD"]
     types:
       - completed
 
